@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pong Game</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #000;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        h1 {
+            margin-bottom: 20px;
+        }
+        
+        canvas {
+            border: 2px solid white;
+            background-color: #000;
+        }
+        
+        .controls {
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        .scores {
+            display: flex;
+            justify-content: space-between;
+            width: 800px;
+            margin: 10px 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        button {
+            background-color: white;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+        
+        button:hover {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pong Game</h1>
+    
+    <div class="scores">
+        <div>Player 1: <span id="score1">0</span></div>
+        <div>Player 2: <span id="score2">0</span></div>
+    </div>
+    
+    <canvas id="gameCanvas" width="800" height="400"></canvas>
+    
+    <div class="controls">
+        <p>Player 1: W/S keys | Player 2: ↑/↓ arrow keys</p>
+        <button onclick="resetGame()">Reset Game</button>
+        <button onclick="togglePause()">Pause/Resume</button>
+    </div>
+    
+    <script src="pong.js"></script>
+</body>
+</html>
